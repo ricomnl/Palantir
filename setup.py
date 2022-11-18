@@ -8,7 +8,7 @@ if sys.version_info.minor < 6:
     warn("Analysis methods were developed using Python 3.6")
 
 # get version
-with open("src/palantir/version.py") as f:
+with open("palantir/version.py") as f:
     exec(f.read())
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -22,7 +22,7 @@ setup(
     url="https://github.com/dpeerlab/palantir",
     author=__author__,
     author_email=__author_email__,
-    package_dir={"": "src"},
+    # package_dir={"": "palantir"},
     packages=["palantir"],
     install_requires=[
         "numpy>=1.14.2",
