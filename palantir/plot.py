@@ -9,29 +9,29 @@ from scipy.stats import gaussian_kde
 import matplotlib
 from matplotlib import font_manager
 
-try:
-    os.environ["DISPLAY"]
-except KeyError:
-    matplotlib.use("Agg")
+# try:
+#     os.environ["DISPLAY"]
+# except KeyError:
+#     matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
 
-with warnings.catch_warnings():
-    # catch experimental ipython widget warning
-    warnings.simplefilter("ignore")
-    import seaborn as sns
+# with warnings.catch_warnings():
+#     # catch experimental ipython widget warning
+#     warnings.simplefilter("ignore")
+#     import seaborn as sns
 
-    sns.set(context="paper", style="ticks", font_scale=1.5, font="Bitstream Vera Sans")
+#     sns.set(context="paper", style="ticks", font_scale=1.5, font="Bitstream Vera Sans")
 
 # set plotting defaults
-with warnings.catch_warnings():
-    # catch warnings that system can't find fonts
-    warnings.simplefilter("ignore")
-    import seaborn as sns
+# with warnings.catch_warnings():
+#     # catch warnings that system can't find fonts
+#     warnings.simplefilter("ignore")
+#     import seaborn as sns
 
-    fm = font_manager.fontManager
-    fm.findfont("Raleway")
-    fm.findfont("Lato")
+#     fm = font_manager.fontManager
+#     fm.findfont("Raleway")
+#     fm.findfont("Lato")
 
 warnings.filterwarnings(action="ignore", message="remove_na is deprecated")
 
